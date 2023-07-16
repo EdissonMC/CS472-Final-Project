@@ -4,6 +4,7 @@
 1. Front End: HTML, CSS, JS
 2. Backend: NodeJS, Express, nodemon, Restful API
 3. Data: should save into or load from the file. If you have enough time, you can save data to a database.
+
 ## Database:
 1. Customer
 ```JavaScript
@@ -34,6 +35,8 @@
   ]
   totalPrice: 1400, //
 }
+
+
 ```
 ## Requirements
 1. The systems will generate several users at the beginning

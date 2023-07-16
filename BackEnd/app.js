@@ -1,24 +1,31 @@
 
 const express = require('express')
+const cors = require('cors')
+const productRoutes = require('./routes/product')
+const orderRoutes = require('./routes/order')
+const customerRoutes= require('./routes/customers')
+
 const app = express()
 
 
-//
+//middleware
+app.use(express.json())
+app.use(cors())
 
-// routes
-app.get('/products',(req, res)=>{
-    res.send("products")
-})
+// routes PRODUCTS
+app.use('/products', productRoutes)
 
-app.get('/orders',(req, res)=>{
-    res.send("products")
-})
+// routes ORDERS
+app.use('/orders',orderRoutes)
+
+// routes CUSTOMERS
+app.use('/customers',customerRoutes )
 
 
 
 // SETUP
-const PORT= process.env.PORT
-app.listen(3000,()=>{
+const PORT = process.env.PORT
+app.listen(3000, () => {
     console.log(`listening in port ${PORT}`)
 })
 
