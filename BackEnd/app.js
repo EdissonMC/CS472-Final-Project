@@ -1,9 +1,12 @@
 
 const express = require('express')
 const cors = require('cors')
+const mockDataSetup= require('./utils/mockSetup')
 const productRoutes = require('./routes/product')
 const orderRoutes = require('./routes/order')
 const customerRoutes= require('./routes/customers')
+
+mockDataSetup.setup()
 
 const app = express()
 
